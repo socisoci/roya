@@ -12,30 +12,35 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet("/CarServlet")
 public class CarServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public CarServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		doPost(request,response);
 	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		
+		String method=request.getParameter("method");
+		switch(method) {
+		case "listAll":
+		{
+			System.out.println("查询显示有的后台");
+			break;
+		}
+		case "add":
+		{
+			System.out.println("添加二手车的方法");
+					break;
+		}
+		case "delete":
+		{
+			System.out.println("删除二手车的方法");
+			break;
+		}
+		case "update":
+		{
+			System.out.println("修改二手车的方法");
+			break;
+		}
+			
+		}
 	}
 
 }
