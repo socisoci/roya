@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8"/>
-<title>二手车后台管理系统</title>
+<title>二手车后台管理系统--添加二手车</title>
 <meta name="author" content="DeathGhost" />
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <!--[if lt IE 9]>
@@ -49,144 +49,83 @@
 <!--aside nav-->
 <!--aside nav-->
 <aside class="lt_aside_nav content mCustomScrollbar">
- <h2><a href="index.html">起始页</a></h2>
+ <h2><a href="index.html">首页</a></h2>
  <ul>
   <li>
    <dl>
-    <dt>常用布局示例</dt>
+    <dt>汽车</dt>
     <!--当前链接则添加class:active-->
-    <dd><a href="product_list.html" class="active">商品列表示例</a></dd>
-    <dd><a href="product_detail.html">商品详情示例</a></dd>
-    <dd><a href="recycle_bin.html">商品回收站示例</a></dd>
+    <dd><a href="CarServlet" class="active">汽车列表</a></dd>
+      
+        <dd><a href="carAdd.jsp">增加汽车</a></dd>
+      
    </dl>
   </li>
   <li>
    <dl>
-    <dt>订单信息</dt>
-    <dd><a href="order_list.html">订单列表示例</a></dd>
-    <dd><a href="order_detail.html">订单详情示例</a></dd>
+    <dt>用户</dt>
+    <dd><a href="order_list.html">用户列表</a></dd>
+    <dd><a href="order_detail.html">用户信息</a></dd>
    </dl>
   </li>
   <li>
    <dl>
-    <dt>会员管理</dt>
-    <dd><a href="user_list.html">会员列表示例</a></dd>
-    <dd><a href="user_detail.html">添加会员（详情）示例</a></dd>
-    <dd><a href="user_rank.html">会员等级示例</a></dd>
-    <dd><a href="adjust_funding.html">会员资金管理示例</a></dd>
+    <dt>新闻</dt>
+    <dd><a href="user_list.html">新闻列表</a></dd>
+    <dd><a href="user_detail.html">添加新闻</a></dd>
+    <dd><a href="user_rank.html">删除新闻</a></dd>
    </dl>
   </li>
+  
   <li>
    <dl>
-    <dt>基础设置</dt>
-    <dd><a href="setting.html">站点基础设置示例</a></dd>
-   </dl>
-  </li>
-  <li>
-   <dl>
-    <dt>配送与支付设置</dt>
+    <dt>中介</dt>
     <dd><a href="express_list.html">配送方式</a></dd>
     <dd><a href="pay_list.html">支付方式</a></dd>
    </dl>
   </li>
-  <li>
-   <dl>
-    <dt>在线统计</dt>
-    <dd><a href="discharge_statistic.html">流量统计</a></dd>
-    <dd><a href="sales_volume.html">销售额统计</a></dd>
-   </dl>
-  </li>
-  <li>
-   <p class="btm_infor">© DeathGhost.cn 版权所有</p>
-  </li>
+  
  </ul>
 </aside>
 
 <section class="rt_wrap content mCustomScrollbar">
  <div class="rt_content">
       <div class="page_title">
-       <h2 class="fl">商品详情示例</h2>
+       <h2 class="fl">二手车添加</h2>
        <a class="fr top_rt_btn">返回产品列表</a>
       </div>
      <section>
+     <form method= "post" action="CarSelect?method=add">
       <ul class="ulColumn2">
        <li>
-        <span class="item_name" style="width:120px;">商品名称：</span>
-        <input type="text" class="textbox textbox_295" placeholder="商品名称..."/>
-        <span class="errorTips">错误提示信息...</span>
+        <span class="item_name" style="width:120px;">汽车名：</span>
+        <input type="text" name="name" class="textbox textbox_295" placeholder="汽车名..."/>
        </li>
        <li>
-        <span class="item_name" style="width:120px;">商品货号：</span>
-        <input type="text" class="textbox" placeholder="商品货号..."/>
-        <span class="errorTips">错误提示信息...</span>
+        <span class="item_name" style="width:120px;">颜色：</span>
+        <input type="text" name= "yanse" class="textbox textbox_295" placeholder="颜色..."/>
+       </li>
+       <li>
+        <span class="item_name" style="width:120px;">公里数：</span>
+        <input type="text" name="gonglishu" class="textbox textbox_295" placeholder="公里数..."/>
        </li>
        <li>
         <span class="item_name" style="width:120px;">品牌：</span>
-        <select class="select">
-         <option>选择品牌</option>
-        </select>
-        <span class="errorTips">错误提示信息...</span>
-       </li>
-       <li>
-        <span class="item_name" style="width:120px;">分类：</span>
-        <select class="select">
-         <option>选择产品分类</option>
-        </select>
-        <span class="errorTips">错误提示信息...</span>
-       </li>
-       <li>
-        <span class="item_name" style="width:120px;">推荐：</span>
-        <label class="single_selection"><input type="radio" name="name"/>是否精品</label>
-        <label class="single_selection"><input type="radio" name="name"/>是否热销</label>
-        <label class="single_selection"><input type="radio" name="name"/>是否新品</label>
+        <input type="text" name= "pingpai" class="textbox textbox_295" placeholder="品牌..."/>
        </li>
        <li>
         <span class="item_name" style="width:120px;">上传图片：</span>
         <label class="uploadImg">
-         <input type="file"/>
+         <input type="file" name= "tupian"/>
          <span>上传图片</span>
         </label>
-       </li>
-       <li>
-        <span class="item_name" style="width:120px;">产品详情：</span>
-        <script id="editor" type="text/plain" style="width:1024px;height:500px;margin-left:120px;margin-top:0;"></script>
-           <!--ueditor可删除下列信息-->
-           <div id="btns" style="margin-left:120px;margin-top:8px;">
-            <div>
-                <button onclick="getAllHtml()">获得整个html的内容</button>
-                <button onclick="getContent()">获得内容</button>
-                <button onclick="setContent()">写入内容</button>
-                <button onclick="setContent(true)">追加内容</button>
-                <button onclick="getContentTxt()">获得纯文本</button>
-                <button onclick="getPlainTxt()">获得带格式的纯文本</button>
-                <button onclick="hasContent()">判断是否有内容</button>
-                <button onclick="setFocus()">使编辑器获得焦点</button>
-                <button onmousedown="isFocus(event)">编辑器是否获得焦点</button>
-                <button onmousedown="setblur(event)" >编辑器失去焦点</button>
-        
-            </div>
-            <div>
-                <button onclick="getText()">获得当前选中的文本</button>
-                <button onclick="insertHtml()">插入给定的内容</button>
-                <button id="enable" onclick="setEnabled()">可以编辑</button>
-                <button onclick="setDisabled()">不可编辑</button>
-                <button onclick=" UE.getEditor('editor').setHide()">隐藏编辑器</button>
-                <button onclick=" UE.getEditor('editor').setShow()">显示编辑器</button>
-                <button onclick=" UE.getEditor('editor').setHeight(300)">设置高度为300默认关闭了自动长高</button>
-            </div>
-        
-            <div>
-                <button onclick="getLocalData()" >获取草稿箱内容</button>
-                <button onclick="clearLocalData()" >清空草稿箱</button>
-            </div>
-        
-        </div>
        </li>
        <li>
         <span class="item_name" style="width:120px;"></span>
         <input type="submit" class="link_btn"/>
        </li>
       </ul>
+      </form>
      </section>
  </div>
 </section>

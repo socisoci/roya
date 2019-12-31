@@ -55,10 +55,9 @@
    <dl>
     <dt>汽车</dt>
     <!--当前链接则添加class:active-->
-    <dd><a href="CarServlet" class="active">汽车列表</a></dd>
-    <dd><a href="product_detail.html">汽车详情</a></dd>
-      <dd><a href="product_detail.html">删除汽车</a></dd>
-        <dd><a href="product_detail.html">增加汽车</a></dd>
+    <dd><a href="CarServlet?method=listAll" class="active">汽车列表</a></dd>
+      <dd><a href="CarServlet?method=delete">删除汽车</a></dd>
+        <dd><a href="carAdd.jsp">增加汽车</a></dd>
    </dl>
   </li>
   <li>
